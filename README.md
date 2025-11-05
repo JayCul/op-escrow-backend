@@ -1,4 +1,4 @@
-# Escrow DApp Backend
+# Op Escrow Backend
 
 A complete NestJS backend for a decentralized escrow application that facilitates secure transactions between buyers and sellers with arbiter oversight.
 
@@ -39,18 +39,18 @@ A complete NestJS backend for a decentralized escrow application that facilitate
 
 ## 📋 Prerequisites
 
-- Node.js 18+
-- MongoDB 5.0+
+- Node.js v22.20.0
+- MongoDB 5.0+ / Atlas
 - Ethereum wallet (for blockchain interactions)
-- npm or yarn
+- npm / yarn / pnpm
 
 ## ⚙️ Installation
 
 1. **Clone the repository**
 
 ```bash
-git clone <repository-url>
-cd escrow-dapp-backend
+git clone https://github.com/JayCul/op-escrow-backend
+cd op-escrow-backend
 ```
 
 2. **Install dependencies**
