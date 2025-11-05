@@ -20,10 +20,10 @@ async function bootstrap() {
     .addTag('escrow')
     .build();
   const document = SwaggerModule.createDocument(app, config);
-  SwaggerModule.setup('api', app, document);
+  SwaggerModule.setup('docs', app, document);
 
   await app.listen(process.env.PORT || 3000);
   console.log(`🚀 Escrow service running on: ${await app.getUrl()}`);
-  console.log(`📚 API Documentation: ${await app.getUrl()}/api`);
+  console.log(`📚 API Documentation: ${await app.getUrl()}/docs`);
 }
 bootstrap();

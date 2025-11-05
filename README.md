@@ -225,7 +225,7 @@ npm run test:cov
 Once running, access Swagger documentation at:
 
 ```
-http://localhost:3000/api
+http://localhost:3000/docs
 ```
 
 ## 🔧 Development
