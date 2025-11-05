@@ -11,9 +11,9 @@ import { User, UserDocument } from '../schemas/user.schema';
 import { CreateUserDto } from '../dto/create-user.dto';
 import { UpdateUserDto } from '../dto/update-user.dto';
 import { ChangePasswordDto } from '../dto/change-password.dto';
-import { SearchUsersResponseDto } from 'src/dto/search-users-response.dto';
-import { SearchUsersDto } from 'src/dto/search-users.dto';
-import { UserResponseDto } from 'src/dto/user-response.dto';
+import { SearchUsersResponseDto } from '../dto/search-users-response.dto';
+import { SearchUsersDto } from '../dto/search-users.dto';
+import { UserResponseDto } from '../dto/user-response.dto';
 
 @Injectable()
 export class UsersService {

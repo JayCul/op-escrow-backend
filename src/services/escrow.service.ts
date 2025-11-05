@@ -14,7 +14,7 @@ import {
 import { CreateEscrowDto } from '../dto/create-escrow.dto';
 import { EscrowActionDto } from '../dto/escrow-action.dto';
 import { BlockchainService } from '../services/blockchain.service';
-import { User, UserDocument } from 'src/schemas/user.schema';
+import { User, UserDocument } from '../schemas/user.schema';
 
 @Injectable()
 export class EscrowService {

@@ -25,10 +25,10 @@ import { UsersService } from '../services/user.service';
 import { UpdateUserDto } from '../dto/update-user.dto';
 import { ChangePasswordDto } from '../dto/change-password.dto';
 import { UserResponseDto } from '../dto/user-response.dto';
-import { User, UserDocument } from 'src/schemas/user.schema';
+import { User, UserDocument } from '../schemas/user.schema';
 import { Model, Types } from 'mongoose';
-import { SearchUsersResponseDto } from 'src/dto/search-users-response.dto';
-import { SearchUsersDto } from 'src/dto/search-users.dto';
+import { SearchUsersResponseDto } from '../dto/search-users-response.dto';
+import { SearchUsersDto } from '../dto/search-users.dto';
 import { InjectModel } from '@nestjs/mongoose';
 
 @ApiTags('users')
