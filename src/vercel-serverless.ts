@@ -4,32 +4,33 @@ import { ExpressAdapter } from '@nestjs/platform-express';
 import express from 'express';
 import { DocumentBuilder, SwaggerModule } from '@nestjs/swagger';
 
-const expressServer = express();
-let cachedServer: any;
+const expressApp = express();
+let cachedApp: any;
 
 export const handler = async (req, res) => {
-  if (!cachedServer) {
+  if (!cachedApp) {
     const app = await NestFactory.create(
       AppModule,
-      new ExpressAdapter(expressServer),
+      new ExpressAdapter(expressApp),
     );
-
-    // Enable CORS for Swagger UI
     app.enableCors();
 
-    // ✅ Set up Swagger only once
+    // ✅ Swagger configuration
     const config = new DocumentBuilder()
-      .setTitle('API Documentation')
-      .setDescription('NestJS Swagger API Docs')
+      .setTitle('API Docs')
+      .setDescription('Swagger UI for NestJS on Vercel')
       .setVersion('1.0')
       .build();
 
     const document = SwaggerModule.createDocument(app, config);
-    SwaggerModule.setup('docs', app, document);
+    SwaggerModule.setup('docs', app, document, {
+      customSiteTitle: 'NestJS Swagger',
+      swaggerOptions: { persistAuthorization: true },
+    });
 
     await app.init();
-    cachedServer = expressServer;
+    cachedApp = expressApp;
   }
 
-  return cachedServer(req, res);
+  return cachedApp(req, res);
 };
